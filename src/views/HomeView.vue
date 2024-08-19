@@ -3,6 +3,7 @@ import CarouselPag from '../components/CarouselPag.vue'
 import CardProduct from '../components/CardProduct.vue'
 import CardAcessorios from '../components/CardAcessorios.vue'
 import CardPhone from '../components/CardPhone.vue'
+import FooterBar from "../components/FooterBar.vue";
 </script>
 
 <template>
@@ -78,7 +79,7 @@ import CardPhone from '../components/CardPhone.vue'
     </div>
   </section>
 
-  <FooterBar />
+
 </template>
 
 <style scoped>
