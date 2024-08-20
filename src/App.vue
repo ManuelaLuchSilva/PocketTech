@@ -1,4 +1,5 @@
 <script setup>
+import FooterBar from "./components/FooterBar.vue";
 </script>
 <template>
   <router-view />

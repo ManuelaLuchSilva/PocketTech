@@ -88,7 +88,7 @@ nav {
   width: 56%;
   height: 34px;
   opacity: 0px;
-  margin: 18px 15px 18px 0;
+  margin: 18px 10% 18px 0;
   position: relative;
   display: flex;
   align-items: center;
