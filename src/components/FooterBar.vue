@@ -110,7 +110,7 @@ div img {
     margin: 0;
 }
 
-.redesSociais-img img:not(:last-child) {
+.redesSociais-img img{
     margin-right: 20px;
 }
 </style>
