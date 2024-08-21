@@ -49,7 +49,7 @@ const prevSlide = () => {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  margin: 25px 95px;
+  margin: 25px 12rem;
 }
 
 .carousel {

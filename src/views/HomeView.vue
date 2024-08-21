@@ -85,7 +85,7 @@ import FooterBar from "../components/FooterBar.vue";
 <style scoped>
 .container-main {
   background-color: #ffffff;
-  margin: 0 96px;
+  margin: 0 12rem;
   min-height: 100px;
   margin-top: 10px;
 }
