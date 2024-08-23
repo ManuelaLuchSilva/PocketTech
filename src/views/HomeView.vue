@@ -8,6 +8,7 @@ import NavBar from "../components/NavBar.vue";
 
 <template>
   <NavBar />
+  <router-link to="admhome">ADm</router-link>
   <CarouselPag />
   <section class="container-main">
     <div class="titleProduct">
