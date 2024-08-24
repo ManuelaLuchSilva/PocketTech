@@ -1,41 +1,59 @@
 <script setup>
 import SidebarAdm from '../components/SidebarAdm.vue'
 import NavbarLogin from '../components/NavbarLogin.vue'
-import { reactive } from 'vue';
 
-const grafico = reactive([
+import { onMounted, ref } from 'vue'
+import * as echarts from 'echarts'
 
-  {
-    id: 1,
-    valor: 1000,
-    mes: 'janeiro'
-  },
-  {
-    id: 2,
-    valor: 1000,
-    mes: 'fevereiro'
-  },
-  {
-    id: 3,
-    valor: 1000,
-    mes: 'março'
-  },
-  {
-    id: 4,
-    valor: 1000,
-    mes: 'abril'
-  },
-  {
-    id: 5,
-    valor: 1000,
-    mes: 'maio'
-  },
-  {
-    id: 6,
-    valor: 100000,
-    mes: 'junho'
-  },
-])
+const vendas = ref([150, 230, 224, 218, 135, 147, 260, 134, 100, 138, 400])
+
+const chartContainer = ref(null)
+
+onMounted(() => {
+  const myChart = echarts.init(chartContainer.value, null, {
+    renderer: 'canvas',
+    useDirtyRect: false
+  })
+
+  const option = {
+    xAxis: {
+      type: 'category',
+      data: [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro'
+      ]
+    },
+    yAxis: {
+      name: 'Vendas',
+      type: 'value'
+    },
+    series: [
+      {
+        data: vendas.value,
+        type: 'line'
+      }
+    ]
+  }
+
+  myChart.setOption(option)
+
+  window.addEventListener('resize', () => {
+    myChart.resize()
+  })
+})
+let vendasTotal = 0
+for (const value of vendas.value) {
+  vendasTotal += value
+}
 </script>
 <template>
   <NavbarLogin />
@@ -59,19 +77,14 @@ const grafico = reactive([
       </div>
 
       <div class="vendas">
-        <img src="" alt="">
+        <img src="" alt="" />
         <div>
-          <h4>Vendas</h4>
-          <p>{{ }}</p>
+          <h4>Vendas:</h4>
+          <p>Total de {{ vendasTotal }} vendas</p>
         </div>
       </div>
-      <div class="barra">
-        <div class="grafico" v-for="produto in grafico" :key="produto.id">
-          <h5>{{ produto.valor }}</h5>
-          <div class="grafico1"></div>
-          <p>{{ produto.mes }}</p>
-        </div>
-        <!-- https://vue-echarts.dev/ -->
+      <div class="grafico">
+        <div ref="chartContainer" class="chart-container"></div>
       </div>
     </section>
   </div>
@@ -89,7 +102,7 @@ const grafico = reactive([
   justify-content: space-around;
 }
 
-.content>div {
+.content > div {
   grid-column: span 2;
   background-color: #d9d9d9;
   display: flex;
@@ -99,8 +112,7 @@ const grafico = reactive([
   min-height: 100px;
 }
 
-.barra {
-  background-color: #d9d9d9;
+.grafico {
   grid-column: span 4 !important;
   min-height: 150px;
   width: 75%;
@@ -109,25 +121,13 @@ const grafico = reactive([
   color: black;
   text-align: center;
 }
-
+.chart-container {
+  width: 100%;
+  height: 400px;
+}
 
 .content img {
   margin: 20px;
   height: calc(100% - 40px);
-}
-
-.grafico:not(.grafico:first-child) {
-  margin-left: 0px !important;
-}
-
-.grafico {
-  margin-left: 40px;
-}
-
-.grafico1 {
-  height: 100px;
-  width: 50px;
-  margin: 5px;
-  background-color: blue;
 }
 </style>

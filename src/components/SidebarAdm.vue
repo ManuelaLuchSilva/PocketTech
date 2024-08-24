@@ -38,7 +38,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <style scoped>
 .sideBar {
   background-color: #d9d9d9;
-  height: 100%;
+  height: auto;
   width: 15rem;
   padding-top: 10px;
   padding-bottom: 10px;
