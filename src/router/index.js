@@ -45,6 +45,11 @@ const router = createRouter({
     path: '/EntradaESaida',
     name: 'EntradaESaida',
     component: () => import('@/views/PagEntraESaida.vue')
+    },
+    {
+    path: '/admhome',
+    name: 'admhome',
+    component: () => import('@/views/AdmHome.vue')
     }
   ]
 })
