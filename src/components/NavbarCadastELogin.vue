@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <nav>
@@ -15,16 +14,6 @@ import { RouterLink, RouterView } from 'vue-router'
           src="../assets/imgs/logo.png"
           alt="logo"
         />
-      </div>
-      <div class="user">
-        <img
-          src="../assets/imgs/img-usuario.png"
-          alt="foto usuario"
-        />
-        <div class="user-cadastro">
-          <p class="minha-conta">MINHA CONTA</p>
-          <p class="entrar">Entrar/Cadastro</p>
-        </div>
       </div>
     </div>
   </nav>
