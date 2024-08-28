@@ -38,7 +38,7 @@ const admin = ref(false)
         <label for="">Manter-me logado</label>
       </div>
       <div>
-        <RouterLink to="/admprodutos">Adm</RouterLink>
+        <RouterLink to="/admhome">Adm</RouterLink>
         <input class="buttonLogin" type="button" value="Login" />
       </div>
       <div class="esquecOrCadastro">
