@@ -1,11 +1,12 @@
 <script setup>
+import NavbarCadastELogin from "@/components/NavbarCadastELogin.vue";
 import FooterBar from "../components/FooterBar.vue";
 import CadastInfo from "@/components/CadastInfo.vue";
 
 </script>
 
 <template>
-    <NavBar />
+    <NavbarCadastELogin />
     <CadastInfo />
     <FooterBar />
 </template>
