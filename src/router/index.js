@@ -21,11 +21,6 @@ const router = createRouter({
       name: 'pecas',
       component: PagPecas
     },
-    }
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
-    },
     {
       path: '/admprodutos',
       name: 'admprodutos',

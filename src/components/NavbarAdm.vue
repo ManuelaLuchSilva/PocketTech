@@ -1,8 +1,4 @@
 <script setup>
-import { reactive } from 'vue'
-
-const Produtos = reactive([{ tipo: 'Manutenção', nome: 'Conserto tela', preco: 100.0 }])
-const quantProduto = Produtos.length
 </script>
 <template>
   <nav>

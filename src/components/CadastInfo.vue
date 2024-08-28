@@ -26,7 +26,7 @@
             </div>
             <input class="buttonCadastro" type="button" value="CRIAR CONTA">
             <div class="voltarCadastro"> 
-            <p class="cadastro"><a href="/">Voltar para o login</a></p>
+            <p class="cadastro"><RouterLink to="/login">Voltar para o login</ROUTERLINK></p>
             </div>
         </div>
     </form>
