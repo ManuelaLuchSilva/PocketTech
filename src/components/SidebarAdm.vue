@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <div class="sideBar">
@@ -7,10 +6,10 @@ import { RouterLink, RouterView } from 'vue-router'
       <h3>Produtos</h3>
       <ul>
         <li>
-          <RouterLink>Cliente</RouterLink>
+          <RouterLink to="/admprodutos">Cliente</RouterLink>
         </li>
         <li>
-          <RouterLink>Orçamentos</RouterLink>
+          <RouterLink to="/admorcamento">Orçamentos</RouterLink>
         </li>
         <li>
           <RouterLink>Entrada/Saída</RouterLink>
