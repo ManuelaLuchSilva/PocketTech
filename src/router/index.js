@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/admentreesaida',
       name: 'admentreesaida',
       component: () => import('../views/AdmentresaidaView.vue')
+    },
+    {
+      path: '/admmargemfatu',
+      name: 'admmargemfatu',
+      component: () => import('../views/AdmmargemfatuView.vue')
     }
   ]
 })
