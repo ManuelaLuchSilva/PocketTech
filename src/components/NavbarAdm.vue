@@ -9,19 +9,19 @@ const quantProduto = Produtos.length
     <div class="container">
       <div class="img-cardapio">
         <img
-          src="https://s3-alpha-sig.figma.com/img/9a5e/a57f/3aa6723342957096838d4315c5812e81?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fJm7LpxfsKKyIYV5frJN3PsDUzmUzsthveXrUublSULqlMcm-cIQwUBS8vdsCKISdngj8EWq0ToQtAItAasFZYo9tePu3E8pXarFV-ko6focc~l9b5-Z4AZUl6RW5Oh~kQ351zoCfPsMj4gpn4dF-HtbZ-tia6ezt3kqMByADTpCao5A5qetcu2cyM61dxZ6-aft7VsJqAax0c8isGVlJaE01Xk69K71Q~VjClOTITV7ufd2XlUyQQRY-wKaDF~a0bLyb3It4Oc4cX19lPcsy-mQpApvSATqvqJLffN0Ihq6DECdYArbNt-hXf7C3p4LwDC5g4-vvaO30qwCtFvOoQ__"
+          src="../assets/imgs/cardapio.png"
           alt="cardapio"
         />
       </div>
       <div class="img-principal">
         <img
-          src="https://s3-alpha-sig.figma.com/img/142c/ba25/11cee177fed5d2d85490b612476dedbb?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ps5Kxq-At7yGw7ByZe6m1BQXycmevDe2oE4nlbkYq3RhiKX20xbyaTbRn8XCZSe6zl9Z4cmhQJ3HMNGN~phEoiQEUfSJ7NWXaguqlbmOd~AIHnBT0F5IiQ6kAgfcMT4mfd8qOI-CxWKslZWgZ1S8pFz27iDjFNaOHLBVwnC2zj7bXXVyyXQoOgowKntMT2Go5aojjqB7klWFMMeTGOVyOfYAvgOlzTiYqAIThw9GAPgTJOiJW~oPRf1dQnPZHdmjw1E7MRCVhF1fEoYIGWN5qFgqDX~BfgtsFA1nf1zEqayfAPmBV~GGGizMjz1w0ZkbTs9zTdHAubn-ZEIXYsASxw__"
+          src="../assets/imgs/logo.png"
           alt="logo"
         />
       </div>
       <div class="user">
         <img
-          src="https://s3-alpha-sig.figma.com/img/20c6/4be9/bf1cf051a4c44c30a9fa7c009141e7af?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fYvdoqy3gVui~0eKRqpJ4LflUmVLFUeM25eGJRukwxt9X6DoSGRDHcR5~Iicpj8UzfiAQlXda1Jl7tgoAV4wl1hV33zoCcbSYDUHabBTFzz9ux32frzQDIrsvjOYAy0cIkf4oNj9uVTn9ukxM3UgeQFAem6hzbuJ9VFO4HBe5WeKs2~CEkktt2KAqL-se6P5gkCN5ZNTM27aIMZdhW1ODugSjzA-8PdQ6V~Lr1nrpg7cLDyiq5vPYB~NZ1xcSgrPTri8zg3SulOGjzTW7BUMQaxUCgWAMLlLT2prq89PC0Fi9btbBphSfuMU~hXyw4hwFNUGtrfLAlo7qx5uFH~--w__"
+          src="../assets/imgs/img-usuario.png"
           alt="foto usuario"
         />
         <div class="user-cadastro">

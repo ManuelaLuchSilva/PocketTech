@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 <template>
   <div class="sideBar">
@@ -6,10 +7,13 @@
       <h3>Produtos</h3>
       <ul>
         <li>
-          <RouterLink to="/admprodutos">Cliente</RouterLink>
+          <RouterLink>Cliente</RouterLink>
         </li>
         <li>
-          <RouterLink to="/admorcamento">Orçamentos</RouterLink>
+          <RouterLink>Orçamentos</RouterLink>
+        </li>
+        <li>
+            <RouterLink>Peças</RouterLink>
         </li>
         <li>
           <RouterLink>Entrada/Saída</RouterLink>
@@ -21,10 +25,10 @@
       <h3>Faturamento</h3>
       <ul>
         <li>
-          <RouterLink to="/admentreesaida">Entradas e saídas</RouterLink>
+          <RouterLink>Entradas e saídas</RouterLink>
         </li>
         <li>
-          <RouterLink to="/admmargemfatu">Margens de faturamento</RouterLink>
+          <RouterLink>Margens de faturamento</RouterLink>
         </li>
       </ul>
     </section>
