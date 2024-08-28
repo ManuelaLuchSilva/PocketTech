@@ -16,7 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <RouterLink to="/pecas">Peças</RouterLink>
         </li>
         <li>
-          <RouterLink to="">Entrada/Saída</RouterLink>
+          <RouterLink to="/EntradaESaida">Entrada/Saída</RouterLink>
         </li>
       </ul>
     </section>
