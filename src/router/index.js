@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import PagCadastro from '@/views/PagCadastro.vue'
 import PagPecas from '@/views/PagPecas.vue'
 
 const router = createRouter({
@@ -9,6 +10,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/cadastro',
+      name: 'cadastro',
+      component: PagCadastro
     },
     {
       path: '/pecas',
@@ -31,7 +37,6 @@ const router = createRouter({
       component: () => import('../views/AdmmargemfatuView.vue')
     },
     {
-
     path: '/login',
     name: 'login',
     component: () => import('../views/LoginPag.vue')
