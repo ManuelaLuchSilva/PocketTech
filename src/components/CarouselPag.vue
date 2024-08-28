@@ -2,10 +2,9 @@
 import { ref } from 'vue'
 
 const slides = [
-  { image: 'https://s3-alpha-sig.figma.com/img/1e74/95a0/3f21f63c46d02467332c1959cdfd5eaf?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=REzFFJOPS2hHoi2soGi7Z1WdavXM7wSXrdq6U2tEf4ZWVCIIFZSecfzaPhCleeQGc8~3g8Kh6g7ZKU~g1gA0TQYFeD0RPD9smlwLTgEUo7iTf8vZ25blg5QZ4pqAs-B7vmWneYtXnQ0xhWw3C3C3oH5mQx99vIY-NxpMIK12IQLfCmTcnI08i2oOJ7dEwguApsE8a5sp210UQP4P3NAJ5Fv~nZDkeXNgrpFcK7ZUMW1qCydtzjCT~2zrA9Yr~G4s-MSzkV~YIe~t9ITQBIclqNlNE0Zi-Dc27DfTyhHTa6pCXBP7B7TLw~AYSAmDkRytmlbcPqnJ6Odrcmmw0e0jBA__', alt: 'Description of image 1' },
-  { image: 'path/to/image2.jpg', alt: 'Description of image 2' },
-  { image: 'path/to/image3.jpg', alt: 'Description of image 3' }
-  // Adicionar mais imgs
+  { image: 'src/assets/imgs/banner.png', alt: 'Description of image 1' },
+  { image: '', alt: 'Description of image 2' },
+  { image: 'path/to/image3.jpg', alt: 'Description of image 3' },
 ]
 
 const currentSlide = ref(0)
@@ -32,14 +31,14 @@ const prevSlide = () => {
     </div>
     <button @click="prevSlide" class="carousel-button prev-button">
       <img
-        src="https://s3-alpha-sig.figma.com/img/252c/b48a/eec9414d2421b4929432d0deee61b834?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b1aE5iBjdvINEl~VV6789FToOS3~1yO7j5zuZmDVxR5Tdn9g4pl8cWSb0x1HrxrIF5ScNHD1adaDnTxWAzlBM44UujyJ-xT3L3~Rb1liAiv2SGo1H775S04HlkuOYj13YOmVZ1tMYAoR-hNsvpK44QCUFdyHUpDpxaWi8h9hLJ-esNZSN~yxvbQt5lWgQBHCu~QIzSqHl~Up-hJfNlXz9hWHRow85JcwhgIqhaLj9ABBQ6ze5Rt8ATCFogn-kmsaBOmksy9iMNY-WdtJyyyYPtOKBgs9PEdgDV8nB3RB7ngpMTWyDvHA3h6i~tvBuuBCFpIgIiYWQdHEIedN2JapIA__"
+        src="../assets/imgs/setaSimples.png"
         alt="prev-button"
         id="prevButton"
       />
     </button>
     <button @click="nextSlide" class="carousel-button next-button">
       <img
-        src="https://s3-alpha-sig.figma.com/img/252c/b48a/eec9414d2421b4929432d0deee61b834?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b1aE5iBjdvINEl~VV6789FToOS3~1yO7j5zuZmDVxR5Tdn9g4pl8cWSb0x1HrxrIF5ScNHD1adaDnTxWAzlBM44UujyJ-xT3L3~Rb1liAiv2SGo1H775S04HlkuOYj13YOmVZ1tMYAoR-hNsvpK44QCUFdyHUpDpxaWi8h9hLJ-esNZSN~yxvbQt5lWgQBHCu~QIzSqHl~Up-hJfNlXz9hWHRow85JcwhgIqhaLj9ABBQ6ze5Rt8ATCFogn-kmsaBOmksy9iMNY-WdtJyyyYPtOKBgs9PEdgDV8nB3RB7ngpMTWyDvHA3h6i~tvBuuBCFpIgIiYWQdHEIedN2JapIA__"
+        src="../assets/imgs/seta.png"
         alt="next-button"
       />
     </button>
