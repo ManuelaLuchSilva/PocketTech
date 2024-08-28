@@ -12,7 +12,7 @@
           <RouterLink to="/admorcamento">Orçamentos</RouterLink>
         </li>
         <li>
-          <RouterLink>Entrada/Saída</RouterLink>
+          <RouterLink to="/EntradaESaida">Entrada/Saída</RouterLink>
         </li>
       </ul>
     </section>
