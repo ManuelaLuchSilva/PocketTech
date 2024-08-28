@@ -2,7 +2,7 @@
 import NavbarAdm from "@/components/NavbarAdm.vue";
 import FooterBar from "../components/FooterBar.vue";
 import Pecas from "@/components/Pecas.vue";
-import SideBarAdm from "@/components/SideBarAdm.vue";
+import SideBarAdm from "../components/SidebarAdm.vue";
 
 </script>
 

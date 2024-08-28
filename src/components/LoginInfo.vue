@@ -38,12 +38,12 @@ const admin = ref(false)
         <label for="">Manter-me logado</label>
       </div>
       <div>
-        <RouterLink to="/admhome">Adm</RouterLink>
+        <RouterLink to="/admprodutos">Adm</RouterLink>
         <input class="buttonLogin" type="button" value="Login" />
       </div>
       <div class="esquecOrCadastro">
         <a href="/" class="esq">Esqueci minha senha</a>
-        <p class="cadastro">Novo no Site !<RouterLink to="/cadastro"> CADASTRE-SE</RouterLink></p>
+        <RouterLink to="/cadastro"> CADASTRE-SE</RouterLink>
       </div>
     </div>
   </form>

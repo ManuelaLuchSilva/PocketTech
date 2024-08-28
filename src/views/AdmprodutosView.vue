@@ -1,7 +1,8 @@
 <script setup>
-import SidebarAdm from '../components/SidebarAdm.vue'
+import SidebarAdm from '../components/SidebarAdm.vue';
 import NavbarAdm from '../components/NavbarAdm.vue'
 import Footerbar from '../components/FooterBar.vue'
+import { RouterLink, RouterView } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const clients = ref([
@@ -244,7 +245,7 @@ const filteredClients = computed(() => {
             <input type="text" v-model="searchQueryName" placeholder="Informe o nome do cliente" />
             <img
               class="loupe-blue"
-              src="https://s3-alpha-sig.figma.com/img/1beb/9435/c528e02aa8de44f8c825263145507fef?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TSnTWJNmc2oMgk2X9nqG-7J624DnD7SCC8SoeM83De7MCo5xrrPM6P~NqD0tQDGeQs36WCufqZI1Ih39~fwZCAvCfKrN-ITT1CbAn6nUaDLwQyY34EAjKYBlHzbYQsW~J58qhSmDYGKh7Rwe7BZWvifRevcZkx0nCGwKgSkp87GyuYxbUdUqYYMNb0cHAMH72k2XUXlrcjkVdDPuGqrpi7mQEmfyIwMLmheTUcQoqPau7XEcM3J5v~Y55VW8fzCBEO9vK7uu~n9Qi1ChvNchiChB~g5gwXcZJB~8ZH-EkDoq0Z5JCNYxKGrTfZzICfv0fOJm4hpKDYPgvMILI5a7hA__"
+              src="../assets/imgs/lupa.png"
               alt="lupa"
               width="25"
               height="25"
@@ -255,7 +256,7 @@ const filteredClients = computed(() => {
 
             <img
               class="loupe-blue"
-              src="https://s3-alpha-sig.figma.com/img/1beb/9435/c528e02aa8de44f8c825263145507fef?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TSnTWJNmc2oMgk2X9nqG-7J624DnD7SCC8SoeM83De7MCo5xrrPM6P~NqD0tQDGeQs36WCufqZI1Ih39~fwZCAvCfKrN-ITT1CbAn6nUaDLwQyY34EAjKYBlHzbYQsW~J58qhSmDYGKh7Rwe7BZWvifRevcZkx0nCGwKgSkp87GyuYxbUdUqYYMNb0cHAMH72k2XUXlrcjkVdDPuGqrpi7mQEmfyIwMLmheTUcQoqPau7XEcM3J5v~Y55VW8fzCBEO9vK7uu~n9Qi1ChvNchiChB~g5gwXcZJB~8ZH-EkDoq0Z5JCNYxKGrTfZzICfv0fOJm4hpKDYPgvMILI5a7hA__"
+              src="../assets/imgs/lupa.png"
               alt="lupa"
               width="25"
               height="25"
