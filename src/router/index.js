@@ -23,6 +23,12 @@ const router = createRouter({
       path: '/admmargemfatu',
       name: 'admmargemfatu',
       component: () => import('../views/AdmmargemfatuView.vue')
+    },
+    {
+
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/LoginPag.vue')
     }
   ]
 })
