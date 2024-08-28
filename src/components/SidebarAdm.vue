@@ -24,7 +24,7 @@
           <RouterLink to="/admentreesaida">Entradas e saídas</RouterLink>
         </li>
         <li>
-          <RouterLink>Margens de faturamento</RouterLink>
+          <RouterLink to="/admmargemfatu">Margens de faturamento</RouterLink>
         </li>
       </ul>
     </section>

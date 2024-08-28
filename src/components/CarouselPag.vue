@@ -3,9 +3,8 @@ import { ref } from 'vue'
 
 const slides = [
   { image: 'src/assets/imgs/banner.png', alt: 'Description of image 1' },
-  { image: 'src/assets/imgs/logo.png', alt: 'Description of image 2' },
-  { image: 'path/to/image3.jpg', alt: 'Description of image 3' }
-  // Adicionar mais imgs
+  { image: '', alt: 'Description of image 2' },
+  { image: 'path/to/image3.jpg', alt: 'Description of image 3' },
 ]
 
 const currentSlide = ref(0)
