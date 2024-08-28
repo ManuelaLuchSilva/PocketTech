@@ -14,6 +14,27 @@ const router = createRouter({
       path: '/pecas',
       name: 'pecas',
       component: PagPecas
+    },
+    }
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/admentreesaida',
+      name: 'admentreesaida',
+      component: () => import('../views/AdmentresaidaView.vue')
+    },
+    {
+      path: '/admmargemfatu',
+      name: 'admmargemfatu',
+      component: () => import('../views/AdmmargemfatuView.vue')
+    },
+    {
+
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/LoginPag.vue')
     }
   ]
 })
