@@ -2,7 +2,6 @@
 import SidebarAdm from '../components/SidebarAdm.vue';
 import NavbarAdm from '../components/NavbarAdm.vue'
 import Footerbar from '../components/FooterBar.vue'
-import { RouterLink, RouterView } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const clients = ref([

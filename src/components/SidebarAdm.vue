@@ -45,7 +45,7 @@ import { RouterLink, RouterView } from 'vue-router'
   width: 15rem;
   padding-top: 10px;
   padding-bottom: 10px;
-  display: fixed;
+  display: fixed !important;
 }
 .sideBar section {
   margin-left: 2rem;

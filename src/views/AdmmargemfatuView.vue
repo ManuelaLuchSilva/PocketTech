@@ -2,7 +2,6 @@
 import SidebarAdm from '../components/SidebarAdm.vue'
 import NavbarAdm from '../components/NavbarAdm.vue'
 import Footerbar from '../components/FooterBar.vue'
-import { RouterLink, RouterView } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const entries = ref([
@@ -135,13 +134,12 @@ const totalEntriesValue = computed(() => {
 <style scoped>
 .container {
   display: flex;
-  width: calc(100% - 16rem);
+  width: calc(100% - 10rem);
 }
 
 .content {
   margin-top: 60px;
   margin-left: 3rem;
-  width: 100%;
   background-color: #d9d9d9;
 }
 .content>div {

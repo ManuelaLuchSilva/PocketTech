@@ -2,7 +2,6 @@
 import SidebarAdm from '../components/SidebarAdm.vue'
 import NavbarAdm from '../components/NavbarAdm.vue'
 import Footerbar from '../components/FooterBar.vue'
-import { RouterLink, RouterView } from 'vue-router'
 import { ref, computed } from 'vue'
 
 const entries = ref([
@@ -224,14 +223,14 @@ const filteredExits = computed(() => {
 <style scoped>
 .container {
   display: flex;
-  width: calc(100% - 16rem);
+  width: calc(100% - 20rem);
 }
 
 .content {
   margin-top: 60px;
   margin-left: 3rem;
   display: grid;
-  width: 100%;
+  width: auto;
 }
 .tableRegistro {
   background-color: #d9d9d9;
@@ -249,7 +248,7 @@ h3 {
 }
 input {
   border: 0;
-  width: 100%;
+  width: 80%;
 }
 .date {
   width: 100%;
@@ -259,7 +258,6 @@ input {
 
 .tables-container {
   display: flex;
-  gap: 20px;
 }
 
 .table-container {

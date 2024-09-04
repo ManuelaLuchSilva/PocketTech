@@ -5,25 +5,16 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav>
     <div class="container">
       <div class="img-cardapio">
-        <img
-          src="../assets/imgs/cardapio.png"
-          alt="cardapio"
-        />
+        <img src="../assets/imgs/cardapio.png" alt="cardapio" />
       </div>
       <div class="img-principal">
-        <img
-          src="../assets/imgs/logo.png"
-          alt="logo"
-        />
+        <RouterLink to="/"> <img src="../assets/imgs/logo.png" alt="logo" /></RouterLink>
       </div>
       <div class="user">
-        <img
-          src="../assets/imgs/img-usuario.png"
-          alt="foto usuario"
-        />
+        <img src="../assets/imgs/img-usuario.png" alt="foto usuario" />
         <div class="user-cadastro">
-          <p class="minha-conta">MINHA CONTA</p>
-          <p class="entrar">Entrar/Cadastro</p>
+          <p class="minha-conta">ADM</p>
+          <RouterLink to="/login" class="entrar">Trocar de conta</RouterLink>
         </div>
       </div>
     </div>
@@ -46,8 +37,8 @@ nav {
 .img-principal img {
   width: 170px;
 }
-.img-principal{
-    margin-right: 70%;
+.img-principal {
+  margin-right: 70%;
 }
 .img-cardapio {
   margin: 15px 50px 15px 40px;
@@ -69,6 +60,11 @@ p {
   width: 40px;
 }
 .user-cadastro {
+  color: white;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
   color: white;
 }
 .user-cadastro .minha-conta {

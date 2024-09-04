@@ -1,24 +1,30 @@
 <script setup>
 import { ref } from 'vue'
+const emit = defineEmits(['enviarUser'])
 
 const user = ref({
-  email: '',
+  name: '',
   password: '',
   rememberMe: false
 })
 const adminEmail = 'admin'
-  const adminPassword = 'admin'
+const adminPassword = 'admin'
 const admin = ref(false)
 
-  if (user.value.email === adminEmail && user.value.password === adminPassword) {
-    admin.value == true
-  } else {
-    admin.value
+// if (user.value.email === adminEmail && user.value.password === adminPassword) {
+//   alert("funciona")
+// } else {
+//   alert("nap")
+// }
+function salvar() {
+  if (user.value.password) {
+    emit("enviarUser", usuario)
   }
+}
 </script>
 
 <template>
-  <form>
+<form @submit.prevent="salvar()" validate>
     <div class="entrar">
       <h1 class="tit">Entrar</h1>
       <hr />
@@ -26,23 +32,23 @@ const admin = ref(false)
     </div>
 
     <div class="log">
-      <label for="">Email:</label>
-      <input type="email" class="prench" v-model="user.email"/>
+      <label for="">Usuario:</label>
+      <input type="text" class="prench" v-model="user.name" required/>
       <label for="">Senha:</label>
-      <input type="password" class="prench" v-model="user.password"/>
+      <input type="password" class="prench" v-model="user.password" required/>
     </div>
 
     <div class="confirm">
       <div class="checkboxLembrar">
-        <input type="checkbox" class="lembrar" v-model="user.rememberMe"/>
+        <input type="checkbox" class="lembrar" v-model="user.rememberMe" />
         <label for="">Manter-me logado</label>
       </div>
       <div>
-        <RouterLink to="/admhome">Adm</RouterLink>
-        <input class="buttonLogin" type="button" value="Login" />
+        <RouterLink to="/admprodutos">Adm</RouterLink>
+        <button class="buttonLogin" type="submit">Login</button>
       </div>
-      <div class="esquecOrCadastro">
-        <a href="/" class="esq">Esqueci minha senha</a>
+      <div class="cadastro">
+        <p href="/" class="esq">Esqueci minha senha</p>
         <RouterLink to="/cadastro"> CADASTRE-SE</RouterLink>
       </div>
     </div>
@@ -60,7 +66,7 @@ form {
 }
 
 .confirm {
-  margin-left: 287px;
+  text-align: center;
 }
 
 .tit {
@@ -92,7 +98,7 @@ hr {
 
 .checkboxLembrar {
   display: flex;
-  padding-left: 13px;
+  justify-content: center;
   font-size: 15px;
 }
 .lembrar {
@@ -110,18 +116,18 @@ hr {
   border-radius: 8px;
 }
 
-.esquecOrCadastro {
+.cadastro {
   font-size: 11px;
   margin-top: 15px;
+  margin-left: 17px;
   margin-bottom: 10px;
 }
-
-.esq {
-  margin-left: 36px;
+.cadastro a {
+  margin: 0;
 }
 
-.cadastro {
-  margin-left: 17px;
-  margin-top: 15px;
+a {
+  text-decoration: none;
+  color: black;
 }
 </style>
