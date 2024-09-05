@@ -1,10 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
+import { ref } from 'vue'
+
+const currentUser = ref('')
+
+function handleUserUpdate(username) {
+  currentUser.value = username
+}</script>
 
 <template>
 
-  <RouterView />
+  <RouterView @enviarUser="handleUserUpdate" />
 </template>
 
 <style scoped>

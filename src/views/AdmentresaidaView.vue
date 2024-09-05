@@ -5,30 +5,30 @@ import Footerbar from '../components/FooterBar.vue'
 import { ref, computed } from 'vue'
 
 const entries = ref([
-  { id: 1, date: '15-01-2024', description: 'Troca de tela de smartphone', value: 180 },
-  { id: 2, date: '20-02-2024', description: 'Compra de capa protetora para celulares', value: 45 },
-  { id: 3, date: '05-03-2024', description: 'Substituição de bateria de celular', value: 120 },
+  { id: 1, date: '15-01-2024', description: 'Troca de tela de smartphone', value: 480 },
+  { id: 2, date: '20-02-2024', description: 'Compra de capa protetora para celulares', value: 300 },
+  { id: 3, date: '05-03-2024', description: 'Substituição de bateria de celular', value: 580 },
   {
     id: 4,
     date: '12-04-2024',
     description: 'Instalação de película de vidro temperado',
-    value: 35
+    value: 300
   },
   { id: 5, date: '23-05-2024', description: 'Reparo de botão de volume em smartphone', value: 90 },
-  { id: 6, date: '30-06-2024', description: 'Compra de carregador rápido USB-C', value: 55 },
-  { id: 7, date: '10-07-2024', description: 'Reparo de conector de carregamento', value: 75 },
+  { id: 6, date: '30-06-2024', description: 'Compra de carregador rápido USB-C', value: 65 },
+  { id: 7, date: '10-07-2024', description: 'Reparo de conector de carregamento', value: 85 },
   { id: 8, date: '18-08-2024', description: 'Venda de fones de ouvido Bluetooth', value: 150 },
   {
     id: 9,
     date: '25-09-2024',
     description: 'Substituição de câmera traseira de celular',
-    value: 200
+    value: 250
   },
   {
     id: 10,
     date: '07-10-2024',
     description: 'Compra de suporte para carro com carregador sem fio',
-    value: 85
+    value: 185
   },
   {
     id: 11,
@@ -40,7 +40,7 @@ const entries = ref([
     id: 12,
     date: '01-12-2024',
     description: 'Venda de protetores de tela para vários modelos',
-    value: 70
+    value: 700
   },
   { id: 13, date: '15-12-2024', description: 'Reparo de tela quebrada de tablet', value: 220 },
   {
@@ -129,7 +129,7 @@ const exits = ref([
     id: 8,
     date: '18-08-2024',
     description: 'Aquisição de fones de ouvido Bluetooth em estoque',
-    value: 600
+    value: 200
   },
   {
     id: 9,

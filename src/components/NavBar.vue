@@ -1,6 +1,5 @@
 <script setup>
 import { reactive } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
 
 
 const Produtos = reactive([{ tipo: 'Manutenção', nome: 'Conserto tela', preco: 100.0 }])

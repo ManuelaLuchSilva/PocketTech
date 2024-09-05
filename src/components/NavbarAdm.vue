@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav>
     <div class="container">
       <div class="img-cardapio">
-        <img src="../assets/imgs/cardapio.png" alt="cardapio" />
+        <RouterLink to="/admhome"><img src="../assets/imgs/cardapio.png" alt="cardapio" /></RouterLink>
       </div>
       <div class="img-principal">
         <RouterLink to="/"> <img src="../assets/imgs/logo.png" alt="logo" /></RouterLink>

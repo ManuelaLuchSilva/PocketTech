@@ -1,24 +1,22 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 const emit = defineEmits(['enviarUser'])
+const router = useRouter()
 
 const user = ref({
   name: '',
   password: '',
   rememberMe: false
 })
-const adminEmail = 'admin'
-const adminPassword = 'admin'
-const admin = ref(false)
+const admName = 'admin'
+const admPassword = 'admin'
 
-// if (user.value.email === adminEmail && user.value.password === adminPassword) {
-//   alert("funciona")
-// } else {
-//   alert("nap")
-// }
 function salvar() {
-  if (user.value.password) {
-    emit("enviarUser", usuario)
+  if (user.value.name === admName && user.value.password === admPassword) {
+    router.push('/admhome')
+  } else {
+    router.push('/')
   }
 }
 </script>
@@ -48,7 +46,7 @@ function salvar() {
         <button class="buttonLogin" type="submit">Login</button>
       </div>
       <div class="cadastro">
-        <p href="/" class="esq">Esqueci minha senha</p>
+        <p href="/">Esqueci minha senha</p>
         <RouterLink to="/cadastro"> CADASTRE-SE</RouterLink>
       </div>
     </div>
