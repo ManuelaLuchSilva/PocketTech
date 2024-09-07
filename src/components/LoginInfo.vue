@@ -42,7 +42,6 @@ function salvar() {
         <label for="">Manter-me logado</label>
       </div>
       <div>
-        <RouterLink to="/admprodutos">Adm</RouterLink>
         <button class="buttonLogin" type="submit">Login</button>
       </div>
       <div class="cadastro">

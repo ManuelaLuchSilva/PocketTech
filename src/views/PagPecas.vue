@@ -8,26 +8,25 @@ import SideBarAdm from "../components/SidebarAdm.vue";
 
 <template>
     <NavbarAdm />
-    <SideBarAdm class="sideBar" />
-    <Pecas class="pecas" />
-    <FooterBar class="footerBar" />
+  <div class="container">
+    <SideBarAdm />
+    <div class="content">
+    <Pecas />
+    </div></div>
+    <FooterBar />
 </template>
 
 <style scoped>
-
-.sideBar{
-    position: absolute;
-    min-height: 670px;
+.container {
+  display: flex;
+  width: calc(100% - 16rem);
 }
 
-.pecas{
-    position: relative;
-    margin-left: 390px;
-    margin-bottom: 30px;
-}
-
-.footerBar{
-    margin-top: 103px;
+.content {
+  margin-top: 60px;
+  margin-left: 3rem;
+  display: grid;
+  width: 100%;
 }
 
 
