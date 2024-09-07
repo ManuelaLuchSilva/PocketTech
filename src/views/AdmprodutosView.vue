@@ -175,7 +175,6 @@ const clients = ref([
   }
 ])
 
-// Função para obter os 10 clientes com o maior número de serviços
 function top10ClientsByServices(clients) {
   const sortedClients = [...clients].sort((a, b) => b.services - a.services)
   const top10 = []
@@ -191,7 +190,6 @@ function top10ClientsByServices(clients) {
   return top10
 }
 
-// Computed property para obter os 10 principais clientes
 const top10Clients = computed(() => top10ClientsByServices(clients.value))
 
 const searchQueryName = ref('')

@@ -2,13 +2,49 @@
 import NavbarAdm from '../components/NavbarAdm.vue'
 import SidebarAdm from '../components/SidebarAdm.vue'
 import FooterBar from '../components/FooterBar.vue'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import * as echarts from 'echarts'
 
+const chartContainer = ref(null)
+
+onMounted(() => {
+  const myChart = echarts.init(chartContainer.value)
+
+  const option = {
+    tooltip: {
+      trigger: 'axis'
+    },
+    toolbox: {
+      show: true,
+      feature: {
+        magicType: { type: ['line', 'bar'] }
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: 'R${value}'
+      }
+    },
+    series: [
+      {
+        type: 'line',
+        data: [350, 230, 264, 218, 155, 147, 260, 200, 270, 420, 390, 555]
+      }
+    ]
+  }
+  myChart.setOption(option)
+})
 
 const entries = ref([
   { id: 1, date: '15-01-2024', description: 'Troca de tela de smartphone', value: 480 },
   { id: 2, date: '20-02-2024', description: 'Compra de capa protetora para celulares', value: 300 },
-  { id: 3, date: '05-03-2024', description: 'Substituição de bateria de celular', value: 580 },
+  { id: 3, date: '05-03-2024', description: 'Substituição de bateria de celular', value: 380 },
   {
     id: 4,
     date: '12-04-2024',
@@ -41,7 +77,7 @@ const entries = ref([
     id: 12,
     date: '01-12-2024',
     description: 'Venda de protetores de tela para vários modelos',
-    value: 700
+    value: 300
   },
   { id: 13, date: '15-12-2024', description: 'Reparo de tela quebrada de tablet', value: 220 },
   {
@@ -157,7 +193,7 @@ const netValue = computed(() => {
   return totalEntriesValue.value - totalExitsValue.value
 })
 const services = computed(() => {
-  return Math.max(...entries.value.map(entry => entry.id))
+  return Math.max(...entries.value.map((entry) => entry.id))
 })
 </script>
 
@@ -170,21 +206,22 @@ const services = computed(() => {
         <div class="box">
           <div class="descricao">
             <h4>Valor líquido</h4>
-            <p>R$ {{totalEntriesValue.toFixed(2)}}</p>
+            <p>R$ {{ totalEntriesValue.toFixed(2) }}</p>
           </div>
         </div>
         <div class="box">
           <div class="descricao">
             <h4>Valor bruto</h4>
-            <p>R$ {{netValue.toFixed(2)}}</p>
+            <p>R$ {{ netValue.toFixed(2) }}</p>
           </div>
         </div>
         <div class="box">
           <div class="descricao">
             <h4>Vendas</h4>
-            <p>{{services}}</p>
+            <p>{{ services }}</p>
           </div>
         </div>
+        <div ref="chartContainer" class="grafico"></div>
       </div>
     </div>
   </div>
@@ -203,22 +240,31 @@ const services = computed(() => {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   padding: 10px;
+  justify-content: space-between;
 }
 
 .grid-container > div {
   background-color: #d9d9d9;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
-  grid-column: span 2;
   margin: 20px;
   align-content: center;
 }
-.descricao{
-    font-family: "Inter", sans-serif;
+.box {
+  grid-column: span 3;
+}
+.descricao {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
 }
 .box .descricao {
   margin: 10px auto 10px 60px;
+}
+.grafico {
+  grid-column: 1/6;
+  width: 100%;
+  height: 400px;
 }
 </style>

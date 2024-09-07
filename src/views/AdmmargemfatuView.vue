@@ -134,12 +134,13 @@ const totalEntriesValue = computed(() => {
 <style scoped>
 .container {
   display: flex;
-  width: calc(100% - 10rem);
+  width: auto;
 }
 
 .content {
   margin-top: 60px;
   margin-left: 3rem;
+  margin-right: 3rem;
   background-color: #d9d9d9;
 }
 .content>div {
