@@ -1,44 +1,44 @@
 <script setup>
-import { reactive } from 'vue'
+import { reactive } from 'vue';
 
-const produtos = reactive(
-  {
-    product: {
-      image: '',
-      price: {
-        value: 109.99,
-      },
-      discount: {
-        type: 'PIX',
-        percentage: 10
-      }
-    }
+const props = defineProps({
+  product: Object
+});
+
+const productData = reactive({
+  image: props.product.image,
+  price: {
+    value: props.product.price,
+  },
+  discount: {
+    type: props.product.discountType,
+    percentage: props.product.discountPercentage
   }
-)
+});
 </script>
+
 <template>
   <div class="product-card">
     <div class="product-content">
-      <img src="" alt="">
+      <img :src="productData.image" alt="Imagem do Produto">
     </div>
     <div class="product-price">
       <p class="aVista">À vista</p>
-      <span class="price">R${{ produtos.product.price.value }}</span>
-      <p class="discount"> {{ produtos.product.discount.type }} com {{ produtos.product.discount.percentage }}% desconto
-      </p>
+      <span class="price">R${{ productData.price.value }}</span>
+      <p class="discount">{{ productData.discount.type }} com {{ productData.discount.percentage }}% desconto</p>
     </div>
     <button class="buy-button">COMPRAR</button>
-
   </div>
-
 </template>
+
 <style scoped>
 .product-card {
   border: 1px solid #ddd;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-  width: 18%;
+  width: 11.5rem;
+  margin: 20px;
 }
 
 .product-content {
@@ -47,6 +47,12 @@ const produtos = reactive(
   background-color: #f5f5f5;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.product-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .aVista {
