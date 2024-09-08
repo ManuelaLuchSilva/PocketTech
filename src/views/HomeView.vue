@@ -9,14 +9,14 @@ import { ref, computed } from 'vue'
 
 //Script Acessorio Slider
 const acessorio = ref([
-  { id: 1, image: '../assets/imgs/img-usuario.png' },
-  { id: 2, image: '' },
-  { id: 3, image: '' },
-  { id: 4, image: '' },
-  { id: 5, image: '' },
-  { id: 6, image: '' },
-  { id: 7, image: '' },
-  { id: 8, image: '' }
+  { id: 1, image: 'src/assets/imgs/Acessorios/Capinhas.png' },
+  { id: 2, image: 'src/assets/imgs/Acessorios/adesivoCelular.jpg' },
+  { id: 3, image: 'src/assets/imgs/Acessorios/foneOuvido.jpg' },
+  { id: 4, image: 'src/assets/imgs/Acessorios/headset.jpg' },
+  { id: 5, image: 'src/assets/imgs/Acessorios/suporteCelular.jpg' },
+  { id: 6, image: 'src/assets/imgs/Acessorios/pelicula.png' },
+  { id: 7, image: 'src/assets/imgs/Acessorios/carregador.png' },
+  { id: 8, image: 'src/assets/imgs/Acessorios/suporteSpiderman.png' }
 ])
 
 const sliderAcessorio = ref(0)
@@ -40,14 +40,14 @@ const nextSlideAcessorio = () => {
 
 //Script Products Slider
 const products = ref([
-  { id: 1, image: '', price: 79.99, discountType: 'PIX', discountPercentage: 5 },
-  { id: 2, image: '', price: 69.99, discountType: 'PIX', discountPercentage: 4 },
-  { id: 3, image: '', price: 49.99, discountType: 'PIX', discountPercentage: 6 },
-  { id: 4, image: '', price: 99.99, discountType: 'PIX', discountPercentage: 7 },
-  { id: 5, image: '', price: 129.99, discountType: 'PIX', discountPercentage: 8 },
-  { id: 6, image: '', price: 79.9, discountType: 'PIX', discountPercentage: 5 },
-  { id: 7, image: '', price: 54.99, discountType: 'PIX', discountPercentage: 6 },
-  { id: 8, image: '', price: 109.99, discountType: 'PIX', discountPercentage: 7 }
+  { id: 1, name:'Películas de Vidro 3D Anti-quebra', image: 'src/assets/imgs/products/Pelicula.png', price: 79.99, discountType: 'PIX', discountPercentage: 5 },
+  { id: 2, name:'Suporte Veicular Magnético para Smartphones', image: 'src/assets/imgs/products/SuporteCelular.jpg', price: 69.99, discountType: 'PIX', discountPercentage: 4 },
+  { id: 3, name:'Carregadores Rápidos USB-C e Wireless', image: 'src/assets/imgs/products/Carregador.jpg', price: 49.99, discountType: 'PIX', discountPercentage: 6 },
+  { id: 4, name:'Fones de Ouvido Bluetooth In-ear', image: 'src/assets/imgs/products/FoneBluetooth.jpg', price: 99.99, discountType: 'PIX', discountPercentage: 7 },
+  { id: 5, name:'Pacote de Manutenção Completa para Celulares', image: 'src/assets/imgs/products/ManutencaoCelular.jpg', price: 129.99, discountType: 'PIX', discountPercentage: 8 },
+  { id: 6, name:'Capinhas Antichoque Personalizadas', image: 'src/assets/imgs/products/CapaCelular.jpg', price: 79.9, discountType: 'PIX', discountPercentage: 5 },
+  { id: 7, name:'Baterias Externas (Power Banks) de Alta Capacidade', image: 'src/assets/imgs/products/BateriaExterna.jpg', price: 54.99, discountType: 'PIX', discountPercentage: 6 },
+  { id: 8, name:'Cabo de Selfie', image: 'src/assets/imgs/products/CabodeSelfie.png', price: 109.99, discountType: 'PIX', discountPercentage: 7 }
 ])
 
 const sliderProduct = ref(0)
@@ -55,8 +55,8 @@ const sliderProduct = ref(0)
 const pedacoSliderProduct = computed(() => {
   const tamanhoPedaco = 4
   const result = []
-  for (let i = 0; i < products.value.length; i += tamanhoPedaco) {
-    result.push(products.value.slice(i, i + tamanhoPedaco))
+  for (let contador = 0; contador < products.value.length; contador += tamanhoPedaco) {
+    result.push(products.value.slice(contador, contador + tamanhoPedaco))
   }
   return result
 })
@@ -72,15 +72,16 @@ const nextSlideProduct = () => {
 
 //Script Phones Slider
 const phones = ref([
-  { id: 1, image: '', price: 119.99, discountType: 'PIX', discountPercentage: 12 },
-  { id: 2, image: '', price: 99.99, discountType: 'PIX', discountPercentage: 7 },
-  { id: 3, image: '', price: 69.99, discountType: 'PIX', discountPercentage: 10 },
-  { id: 4, image: '', price: 159.99, discountType: 'PIX', discountPercentage: 20 },
-  { id: 5, image: '', price: 209.99, discountType: 'PIX', discountPercentage: 25 },
-  { id: 6, image: '', price: 79.99, discountType: 'PIX', discountPercentage: 15 },
-  { id: 7, image: '', price: 139.99, discountType: 'PIX', discountPercentage: 18 },
-  { id: 8, image: '', price: 219.99, discountType: 'PIX', discountPercentage: 22 }
+  { id: 1, name: 'iPhone 15 Pro', image: 'src/assets/imgs/Phones/Iphone15Pro.png', price: 1199.99, discountType: 'PIX', discountPercentage: 12 },
+  { id: 2, name: 'Samsung Galaxy S24 Ultra', image: 'src/assets/imgs/Phones/SamsungGalaxyS24Ultra.png', price: 1099.99, discountType: 'PIX', discountPercentage: 7 },
+  { id: 3, name: 'Google Pixel 8 Pro', image: 'src/assets/imgs/Phones/GooglePixel8Pro.png', price: 999.99, discountType: 'PIX', discountPercentage: 10 },
+  { id: 4, name: 'OnePlus 12', image: 'src/assets/imgs/Phones/oneplus12.jpg', price: 1299.99, discountType: 'PIX', discountPercentage: 20 },
+  { id: 5, name: 'Xiaomi Mi 13 Pro', image: 'src/assets/imgs/Phones/XiaomiMi13Pro.png', price: 1199.99, discountType: 'PIX', discountPercentage: 25 },
+  { id: 6, name: 'Sony Xperia 1 V', image: 'src/assets/imgs/Phones/sonyXperia.jpg', price: 899.99, discountType: 'PIX', discountPercentage: 15 },
+  { id: 7, name: 'Oppo Find X6 Pro', image: 'src/assets/imgs/Phones/OppoX6.png', price: 1099.99, discountType: 'PIX', discountPercentage: 18 },
+  { id: 8, name: 'Huawei P60 Pro', image: 'src/assets/imgs/Phones/huaweiP60.jpg', price: 1249.99, discountType: 'PIX', discountPercentage: 22 }
 ])
+
 
 const sliderPhone = ref(0)
 

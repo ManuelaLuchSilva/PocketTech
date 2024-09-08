@@ -1,61 +1,50 @@
 <script setup>
-import { reactive } from 'vue'
+import { store } from '../store/store.js'
+import { ref } from 'vue'
 
+const isCartMenuVisible = ref(false)
 
-const Produtos = reactive([{ tipo: 'Manutenção', nome: 'Conserto tela', preco: 100.0 }])
-const quantProduto = Produtos.length
+const toggleCartMenu = () => {
+  isCartMenuVisible.value = !isCartMenuVisible.value
+}
 </script>
 <template>
   <nav>
     <div class="container">
       <div class="img-cardapio">
-        <img
-          src="../assets/imgs/cardapio.png"
-          alt="cardapio"
-        />
+        <img src="../assets/imgs/cardapio.png" alt="cardapio" />
       </div>
       <div class="img-principal">
-        <img
-          src="../assets/imgs/logo.png"
-          alt="logo"
-        />
+        <img src="../assets/imgs/logo.png" alt="logo" />
       </div>
       <div class="search-box">
         <input type="text" class="search-text" placeholder="O que você está procurando?" />
-        <a class="search-btn">
-          <img
-            class="loupe-blue"
-            src="../assets/imgs/lupa.png"
-            alt="lupa"
-            width="25"
-            height="25"
-          />
-        </a>
+        <div class="search-btn">
+          <img class="loupe-blue" src="../assets/imgs/lupa.png" alt="lupa" width="25" height="25" />
+        </div>
       </div>
       <div class="user">
-        <img
-          src="../assets/imgs/img-usuario.png"
-          alt="foto usuario"
-        />
+        <img src="../assets/imgs/img-usuario.png" alt="foto usuario" />
         <div class="user-cadastro">
           <p class="minha-conta">MINHA CONTA</p>
           <RouterLink to="/login">entrar/cadastrar</RouterLink>
         </div>
       </div>
-      <div class="content-carrinho">
-        <img
-          src="../assets/imgs/carrinho.png"
-          alt="carrinho"
-        />
+      <div class="content-carrinho" @click="toggleCartMenu">
+        <img src="../assets/imgs/carrinho.png" alt="carrinho" />
         <div>
           <div class="carrinho">
             <p id="carrinho">carrinho</p>
-            <img
-              src="../assets/imgs/setaSimples.png"
-              alt="seta" 
-            />
+            <img src="../assets/imgs/setaSimples.png" alt="seta" />
           </div>
-          <p id="produtos">{{ quantProduto }} Produtos</p>
+          <p id="produtos">{{ store.cartCount }} Produtos</p>
+        </div>
+        <div v-if="isCartMenuVisible" class="cart-dropdown">
+          <ul>
+            <li v-for="(product, index) in store.cart" :key="index">
+              {{ product.name }} - R${{ product.price }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -104,7 +93,7 @@ nav {
   border-radius: 60px;
   background-color: none;
   color: #898989;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-align: left;
@@ -112,6 +101,9 @@ nav {
   border: 0;
   outline: 0;
   margin-left: 10px;
+}
+.search-box:hover .search-btn img {
+  opacity: 0.7;
 }
 .search-box input::placeholder {
   color: #898989;
@@ -121,6 +113,7 @@ nav {
   width: 28px;
   height: 27px;
 }
+
 .user {
   width: auto;
   display: flex;
@@ -137,7 +130,7 @@ p {
   color: white;
   text-decoration: none;
 }
-a{
+a {
   text-decoration: none;
   color: white;
 }
@@ -177,7 +170,7 @@ a{
   margin-top: 12px;
 }
 .carrinho #carrinho {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
@@ -193,4 +186,32 @@ a{
   margin-left: 3px;
   color: white;
 }
-</style> 
+.cart-dropdown {
+  background-color: white;
+  border: 1px solid #ddd;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cart-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-dropdown li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-dropdown li:last-child {
+  border-bottom: none;
+}
+</style>

@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const props = defineProps({
   acessorio: Object
-});
+})
 const isExpanded = ref(false)
 
 const toggleExpand = () => {
@@ -14,9 +14,8 @@ const toggleExpand = () => {
 <template>
   <div class="acessories-card">
     <div :class="['acessories-content', { expanded: isExpanded }]" @click="toggleExpand">
-      <img :src="props.image" alt="Imagem do Acessório" />
+      <img :src="props.acessorio.image" alt="Imagem do Acessório" />
     </div>
-    <div class="acessories-price">{{ props.price }}</div>
     <button class="see-more" @click="toggleExpand">Ver produto</button>
   </div>
 </template>
@@ -49,7 +48,6 @@ const toggleExpand = () => {
 .acessories-content img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 button {
   border: 0;

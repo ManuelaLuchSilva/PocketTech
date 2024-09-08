@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 
 const slides = [
-  { image: 'src/assets/imgs/banner.png', alt: 'Description of image 1' },
-  { image: 'src/assets/imgs/banner.png', alt: 'Description of image 2' },
-  { image: 'src/assets/imgs/banner.png', alt: 'Description of image 3' },
+  { image: 'src/assets/imgs/banner.png', alt: 'Banner 1' },
+  { image: 'src/assets/imgs/banner.png', alt: 'Banner 2' },
+  { image: 'src/assets/imgs/banner.png', alt: 'Banner 3' },
 ]
 
 const currentSlide = ref(0)
@@ -70,7 +70,7 @@ const prevSlide = () => {
 .carousel-button {
   position: absolute;
   top: 50%;
-  background-color: gray;
+  background-color: transparent;
   border-radius: 30px;
   color: none;
   border: none;
@@ -81,9 +81,10 @@ const prevSlide = () => {
 .carousel-button img{
   width: 100px;
 }
-.carousel-button img:hover {
-  transition: all 200ms;
-  transform: scale(1.2);
+.carousel-button:hover img {
+  transition-timing-function: ease-in-out;
+  transition-duration: 400ms;
+  transform: scale(2);
 }
 .prev-button {
   left: 10px;

@@ -1,37 +1,48 @@
 <script setup>
+import { store } from "../store/store.js";
 import { reactive } from 'vue';
 
 const props = defineProps({
   product: Object
 });
 
-const productData = reactive({
-  image: props.product.image,
-  price: {
-    value: props.product.price,
-  },
-  discount: {
-    type: props.product.discountType,
-    percentage: props.product.discountPercentage
-  }
-});
+const addToCart = () => {
+  const productInfo = {
+    nome: props.product.nome,
+    preco: props.product.price
+  };
+  store.addToCart(props.product);
+};
 </script>
 
 <template>
   <div class="product-card">
+    <div class="product-title">
+      <p>{{ props.product.name }}</p>
+    </div>
     <div class="product-content">
-      <img :src="productData.image" alt="Imagem do Produto">
+      <img :src="props.product.image" alt="Imagem do Produto">
     </div>
     <div class="product-price">
       <p class="aVista">À vista</p>
-      <span class="price">R${{ productData.price.value }}</span>
-      <p class="discount">{{ productData.discount.type }} com {{ productData.discount.percentage }}% desconto</p>
+      <span class="price">R${{ props.product.price }}</span>
+      <p v-if="props.product.discountPercentage" class="discount">{{ props.product.discountType }} com {{ props.product.discountPercentage }}% desconto</p>
     </div>
-    <button class="buy-button">COMPRAR</button>
+    <button @click="addToCart" class="buy-button">COMPRAR</button>
   </div>
 </template>
 
 <style scoped>
+.product-title{
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 4px;
+}
+.product-title p{
+  height: 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
 .product-card {
   border: 1px solid #ddd;
   padding: 20px;
@@ -47,6 +58,8 @@ const productData = reactive({
   background-color: #f5f5f5;
   border-radius: 5px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .product-content img {

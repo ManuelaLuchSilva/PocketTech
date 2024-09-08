@@ -1,37 +1,47 @@
 <script setup>
 import { reactive } from 'vue';
+import { store } from "../store/store.js";
 
 const props = defineProps({
   phone: Object
 });
-
-const phone = reactive({
-  image: props.phone.image,
-  price: {
-    value: props.phone.price,
-  },
-  discount: {
-    type: props.phone.discountType,
-    percentage: props.phone.discountPercentage
-  }
-});
+const addPhoneToCart = () => {
+  const productInfo = {
+    name: props.phone.name,
+    price: props.phone.price
+  };
+  store.addToCart(productInfo);
+};
 </script>
 
 <template>
   <div class="product-card">
+    <div class="product-title">
+      <p>{{ props.phone.name }}</p>
+    </div>
     <div class="product-content">
-      <img :src="phone.image" alt="Imagem do Produto">
+      <img :src="props.phone.image" alt="Imagem do Produto">
     </div>
     <div class="product-price">
       <p class="aVista">À vista</p>
-      <span class="price">R${{ phone.price.value }}</span>
-      <p class="discount">{{ phone.discount.type }} com {{ phone.discount.percentage }}% desconto</p>
+      <span class="price">R${{ props.phone.price }}</span>
+      <p class="discount">{{ props.phone.discountType }} com {{ props.phone.discountPercentage }}% desconto</p>
     </div>
-    <button class="buy-button">COMPRAR</button>
+    <button  @click="addPhoneToCart" class="buy-button">COMPRAR</button>
   </div>
 </template>
 
 <style scoped>
+.product-title{
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 4px;
+}
+.product-title p{
+  height: 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
 .product-card {
   border: 1px solid #ddd;
   padding: 20px;
@@ -47,10 +57,12 @@ const phone = reactive({
   background-color: #f5f5f5;
   border-radius: 5px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .product-content img {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: cover;
 }
