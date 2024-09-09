@@ -40,14 +40,14 @@ const nextSlideAcessorio = () => {
 
 //Script Products Slider
 const products = ref([
-  { id: 1, name:'Películas de Vidro 3D Anti-quebra', image: 'src/assets/imgs/products/Pelicula.png', price: 79.99, discountType: 'PIX', discountPercentage: 5 },
-  { id: 2, name:'Suporte Veicular Magnético para Smartphones', image: 'src/assets/imgs/products/SuporteCelular.jpg', price: 69.99, discountType: 'PIX', discountPercentage: 4 },
-  { id: 3, name:'Carregadores Rápidos USB-C e Wireless', image: 'src/assets/imgs/products/Carregador.jpg', price: 49.99, discountType: 'PIX', discountPercentage: 6 },
-  { id: 4, name:'Fones de Ouvido Bluetooth In-ear', image: 'src/assets/imgs/products/FoneBluetooth.jpg', price: 99.99, discountType: 'PIX', discountPercentage: 7 },
-  { id: 5, name:'Pacote de Manutenção Completa para Celulares', image: 'src/assets/imgs/products/ManutencaoCelular.jpg', price: 129.99, discountType: 'PIX', discountPercentage: 8 },
-  { id: 6, name:'Capinhas Antichoque Personalizadas', image: 'src/assets/imgs/products/CapaCelular.jpg', price: 79.9, discountType: 'PIX', discountPercentage: 5 },
-  { id: 7, name:'Baterias Externas (Power Banks) de Alta Capacidade', image: 'src/assets/imgs/products/BateriaExterna.jpg', price: 54.99, discountType: 'PIX', discountPercentage: 6 },
-  { id: 8, name:'Cabo de Selfie', image: 'src/assets/imgs/products/CabodeSelfie.png', price: 109.99, discountType: 'PIX', discountPercentage: 7 }
+  { id: 1, name: 'Películas de Vidro 3D Anti-quebra', image: 'src/assets/imgs/Products/Pelicula.png', price: 79.99, discountType: 'PIX', discountPercentage: 5 },
+  { id: 2, name: 'Suporte Veicular Magnético para Smartphones', image: 'src/assets/imgs/Products/SuporteCelular.jpg', price: 69.99, discountType: 'PIX', discountPercentage: 4 },
+  { id: 3, name: 'Carregadores Rápidos USB-C e Wireless', image: 'src/assets/imgs/Products/Carregador.jpg', price: 49.99, discountType: 'PIX', discountPercentage: 6 },
+  { id: 4, name: 'Fones de Ouvido Bluetooth In-ear', image: 'src/assets/imgs/Products/FoneBluetooth.jpg', price: 99.99, discountType: 'PIX', discountPercentage: 7 },
+  { id: 5, name: 'Pacote de Manutenção Completa para Celulares', image: 'src/assets/imgs/Products/ManutencaoCelular.jpg', price: 129.99, discountType: 'PIX', discountPercentage: 8 },
+  { id: 6, name: 'Capinhas Antichoque Personalizadas', image: 'src/assets/imgs/Products/CapaCelular.jpg', price: 79.9, discountType: 'PIX', discountPercentage: 5 },
+  { id: 7, name: 'Baterias Externas (Power Banks) de Alta Capacidade', image: 'src/assets/imgs/Products/BateriaExterna.jpg', price: 54.99, discountType: 'PIX', discountPercentage: 6 },
+  { id: 8, name: 'Cabo de Selfie', image: 'src/assets/imgs/Products/CabodeSelfie.png', price: 109.99, discountType: 'PIX', discountPercentage: 7 }
 ])
 
 const sliderProduct = ref(0)
@@ -117,20 +117,9 @@ const nextSlidePhone = () => {
         <img src="../assets/imgs/setaSimples.png" alt="" />
       </button>
       <div class="carouselAcessorio">
-        <div
-          class="carousel-container"
-          :style="{ transform: `translateX(-${sliderAcessorio * 100}%)` }"
-        >
-          <div
-          class="carousel-slide"
-          v-for="(pedaco, index) in pedacoSliderAcessorio"
-          :key="index"
-        >
-          <CardAcessorios
-            v-for="item in pedaco"
-            :key="item.id"
-            :acessorio="item"
-            />
+        <div class="carousel-container" :style="{ transform: `translateX(-${sliderAcessorio * 100}%)` }">
+          <div class="carousel-slide" v-for="(pedaco, index) in pedacoSliderAcessorio" :key="index">
+            <CardAcessorios v-for="item in pedaco" :key="item.id" :acessorio="item" />
           </div>
         </div>
       </div>
@@ -148,10 +137,7 @@ const nextSlidePhone = () => {
         <img src="../assets/imgs/setaSimples.png" alt="" />
       </button>
       <div class="carouselProduct">
-        <div
-          class="carousel-container"
-          :style="{ transform: `translateX(-${sliderProduct * 100}%)` }"
-        >
+        <div class="carousel-container" :style="{ transform: `translateX(-${sliderProduct * 100}%)` }">
           <div class="carousel-slide" v-for="(pedaco, index) in pedacoSliderProduct" :key="index">
             <CardProduct v-for="item in pedaco" :key="item.id" :product="item" />
           </div>
@@ -170,10 +156,7 @@ const nextSlidePhone = () => {
         <img src="../assets/imgs/setaSimples.png" alt="" />
       </button>
       <div class="carouselPhone">
-        <div
-          class="carousel-container"
-          :style="{ transform: `translateX(-${sliderPhone * 100}%)` }"
-        >
+        <div class="carousel-container" :style="{ transform: `translateX(-${sliderPhone * 100}%)` }">
           <div class="carousel-slide" v-for="(chunk, index) in pedacosSliderPhone" :key="index">
             <CardPhone v-for="item in chunk" :key="item.id" :phone="item" />
           </div>
@@ -263,22 +246,27 @@ button:hover {
   transition-timing-function: linear;
   background-color: #e9e9e9;
 }
+
 .right-button:hover {
   transform: translateX(-30%);
 }
+
 .left-button:hover {
   transform: translateX(30%);
 }
+
 /* Carousel Acessorio*/
 .carouselAcessorio {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
+
 .CardAcessorios {
   flex: 1;
   margin: 0 10px;
 }
+
 /* Carousel Product*/
 .carouselProduct {
   position: relative;
@@ -290,6 +278,7 @@ button:hover {
   flex: 1;
   margin: 0 10px;
 }
+
 /* CarouselPhone */
 .carouselPhone {
   position: relative;
