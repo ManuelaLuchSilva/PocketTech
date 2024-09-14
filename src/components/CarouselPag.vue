@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 const slides = [
   { image: 'src/assets/imgs/banner.png', alt: 'Banner 1' },
-  { image: 'src/assets/imgs/banner.png', alt: 'Banner 2' },
-  { image: 'src/assets/imgs/banner.png', alt: 'Banner 3' },
+  { image: 'src/assets/imgs/banner2.png', alt: 'Banner 2' },
+  { image: 'src/assets/imgs/banner3.png', alt: 'Banner 3' },
 ]
 
 const currentSlide = ref(0)
@@ -65,6 +65,7 @@ const prevSlide = () => {
 .carousel-slide img {
   width: 100%;
   height: auto;
+  opacity: 0.9;
 }
 
 .carousel-button {
