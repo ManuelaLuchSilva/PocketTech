@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-const emit = defineEmits(['enviarUser'])
+import { store } from '../store/store.js'
+
 const router = useRouter()
 
 const user = ref({
@@ -9,20 +10,23 @@ const user = ref({
   password: '',
   rememberMe: false
 })
+
 const admName = 'admin'
 const admPassword = 'admin'
 
 function salvar() {
   if (user.value.name === admName && user.value.password === admPassword) {
+    store.setUser(user.value.name)
     router.push('/admhome')
   } else {
+    store.setUser(user.value.name)
     router.push('/')
   }
 }
 </script>
 
 <template>
-<form @submit.prevent="salvar()" validate>
+  <form @submit.prevent="salvar">
     <div class="entrar">
       <h1 class="tit">Entrar</h1>
       <hr />
@@ -30,10 +34,10 @@ function salvar() {
     </div>
 
     <div class="log">
-      <label for="">Usuario:</label>
-      <input type="text" class="prench" v-model="user.name" required/>
+      <label for="">Usuário:</label>
+      <input type="text" class="prench" v-model="user.name" required />
       <label for="">Senha:</label>
-      <input type="password" class="prench" v-model="user.password" required/>
+      <input type="password" class="prench" v-model="user.password" required />
     </div>
 
     <div class="confirm">
@@ -46,7 +50,7 @@ function salvar() {
       </div>
       <div class="cadastro">
         <p href="/">Esqueci minha senha</p>
-        <RouterLink to="/cadastro"> CADASTRE-SE</RouterLink>
+        <RouterLink to="/cadastro">CADASTRE-SE</RouterLink>
       </div>
     </div>
   </form>
