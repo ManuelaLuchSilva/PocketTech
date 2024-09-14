@@ -1,12 +1,14 @@
 <script setup>
 import { store } from '../store/store.js'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const isCartMenuVisible = ref(false)
 
 const toggleCartMenu = () => {
   isCartMenuVisible.value = !isCartMenuVisible.value
 }
+
+const userName = computed(() => store.user.name)
 </script>
 <template>
   <nav>
@@ -25,7 +27,11 @@ const toggleCartMenu = () => {
       </div>
       <div class="user">
         <img src="../assets/imgs/img-usuario.png" alt="foto usuario" />
-        <div class="user-cadastro">
+        <div class="user-cadastro" v-if="userName">
+          <p class="minha-conta">Olá {{ userName }}</p>
+          <RouterLink to="/login">trocar de conta</RouterLink>
+        </div>
+        <div class="user-cadastro" v-else>
           <p class="minha-conta">MINHA CONTA</p>
           <RouterLink to="/login">entrar/cadastrar</RouterLink>
         </div>
