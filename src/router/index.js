@@ -47,6 +47,11 @@ const router = createRouter({
     component: () => import('@/views/PagEntraESaida.vue')
     },
     {
+      path: '/admorcamento',
+      name: 'admorcamento',
+      component: () => import('@/views/AdmOrcamento.vue')
+    },
+    {
       path: '/admhome',
       name: 'admhome',
       component: () => import('@/views/AdmHome.vue')
