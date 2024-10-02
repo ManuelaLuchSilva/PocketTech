@@ -33,20 +33,20 @@
                 <p>Siga-nos nas redes sociais</p>
                 <div class="redesSociais-img">
                     <a href="">
-                        <img src="../../public/imgs/instagram.png"
+                        <img src="../../imgs/instagram.png"
                             alt="logo Instagram" />
                     </a>
                     <a href="">
-                        <img src="../../public/imgs/facebook.png"
+                        <img src="../../imgs/facebook.png"
                             alt="logo Facebook" />
                     </a>
                     <a href="">
-                        <img src="../../public/imgs/twitter.png"
+                        <img src="../../imgs/twitter.png"
                             alt="logo Twiter" />
                     </a>
                     <a href="">
                         <img id="youtube"
-                            src="../../public/imgs/youtube.png"
+                            src="../../imgs/youtube.png"
                             alt="logo Youtube" />
                     </a>
                 </div>

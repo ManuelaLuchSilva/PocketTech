@@ -14,19 +14,19 @@ const userName = computed(() => store.user.name)
   <nav>
     <div class="container">
       <div class="img-cardapio">
-        <img src="../../public/imgs/cardapio.png" alt="cardapio" />
+        <img src="../../imgs/cardapio.png" alt="cardapio" />
       </div>
       <div class="img-principal">
-        <img src="../../public/imgs/logo.png" alt="logo" />
+        <img src="../../imgs/logo.png" alt="logo" />
       </div>
       <div class="search-box">
         <input type="text" class="search-text" placeholder="O que você está procurando?" />
         <div class="search-btn">
-          <img class="loupe-blue" src="../../public/imgs/lupa.png" alt="lupa" width="25" height="25" />
+          <img class="loupe-blue" src="../../imgs/lupa.png" alt="lupa" width="25" height="25" />
         </div>
       </div>
       <div class="user">
-        <img src="../../public/imgs/img-usuario.png" alt="foto usuario" />
+        <img src="../../imgs/img-usuario.png" alt="foto usuario" />
         <div class="user-cadastro" v-if="userName">
           <p class="minha-conta">Olá {{ userName }}</p>
           <RouterLink to="/login">Trocar de conta</RouterLink>
@@ -37,11 +37,11 @@ const userName = computed(() => store.user.name)
         </div>
       </div>
       <div class="content-carrinho" @click="toggleCartMenu">
-        <img src="../../public/imgs/carrinho.png" alt="carrinho" />
+        <img src="../../imgs/carrinho.png" alt="carrinho" />
         <div>
           <div class="carrinho">
             <p id="carrinho">carrinho</p>
-            <img src="../../public/imgs/setaSimples.png" alt="seta" />
+            <img src="../../imgs/setaSimples.png" alt="seta" />
           </div>
           <p id="produtos">{{ store.cartCount }} Produtos</p>
         </div>

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "echarts": "^5.5.1",
+    "surge": "^0.24.6",
     "vue": "^3.4.29",
     "vue-echarts": "^7.0.3",
     "vue-router": "^4.3.3"

@@ -5,13 +5,13 @@
     <div class="container">
       <div class="img-cardapio">
         <img
-          src="../../public/imgs/cardapio.png"
+          src="../../imgs/cardapio.png"
           alt="cardapio"
         />
       </div>
       <div class="img-principal">
         <img
-          src="../../public/imgs/logo.png"
+          src="../../imgs/logo.png"
           alt="logo"
         />
       </div>
