@@ -221,11 +221,11 @@ const nextSlidePhone = () => {
   <section class="container-main">
     <div class="titleProduct">
       <h2>Acessórios</h2>
-      <img src="../public/imgs/setaTorta.png" alt="seta tortinha" />
+      <img src="../../public/imgs/setaTorta.png" alt="seta tortinha" />
     </div>
     <div class="produtos">
       <button @click="prevSlideAcessorio" class="left-button">
-        <img src="../public/imgs/setaSimples.png" alt="" />
+        <img src="../../public/imgs/setaSimples.png" alt="" />
       </button>
       <div class="carouselAcessorio">
         <div
