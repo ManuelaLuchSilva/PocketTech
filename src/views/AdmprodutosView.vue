@@ -75,7 +75,7 @@ const filteredClients = computed(() => {
             <input type="text" v-model="searchQueryName" placeholder="Informe o nome do cliente" />
             <img
               class="loupe-blue"
-              src="../assets/imgs/lupa.png"
+              src="../../public/imgs/lupa.png"
               alt="lupa"
               width="25"
               height="25"
@@ -85,7 +85,7 @@ const filteredClients = computed(() => {
             <input type="text" v-model="searchQueryCpf" placeholder="Informe o CPF do cliente" />
             <img
               class="loupe-blue"
-              src="../assets/imgs/lupa.png"
+              src="../../public/imgs/lupa.png"
               alt="lupa"
               width="25"
               height="25"
