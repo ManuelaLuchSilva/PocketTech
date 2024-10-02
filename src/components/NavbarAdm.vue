@@ -5,13 +5,13 @@ import { RouterLink, RouterView } from 'vue-router'
   <nav>
     <div class="container">
       <div class="img-cardapio">
-        <RouterLink to="/admhome"><img src="../assets/imgs/cardapio.png" alt="cardapio" /></RouterLink>
+        <RouterLink to="/admhome"><img src="../../public/imgs/cardapio.png" alt="cardapio" /></RouterLink>
       </div>
       <div class="img-principal">
-        <RouterLink to="/"> <img src="../assets/imgs/logo.png" alt="logo" /></RouterLink>
+        <RouterLink to="/"> <img src="../../public/imgs/logo.png" alt="logo" /></RouterLink>
       </div>
       <div class="user">
-        <img src="../assets/imgs/img-usuario.png" alt="foto usuario" />
+        <img src="../../public/imgs/img-usuario.png" alt="foto usuario" />
         <div class="user-cadastro">
           <p class="minha-conta">ADM</p>
           <RouterLink to="/login" class="entrar">Trocar de conta</RouterLink>
