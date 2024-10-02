@@ -43,7 +43,7 @@ const products = ref([
   {
     id: 1,
     name: 'Películas de Vidro 3D Anti-quebra',
-    image: 'src/assets/imgs/products/Pelicula.png',
+    image: 'src/assets/imgs/Products/Pelicula.png',
     price: 79.99,
     discountType: 'PIX',
     discountPercentage: 5
@@ -51,7 +51,7 @@ const products = ref([
   {
     id: 2,
     name: 'Suporte Veicular Magnético para Smartphones',
-    image: 'src/assets/imgs/products/SuporteCelular.jpg',
+    image: 'src/assets/imgs/Products/SuporteCelular.jpg',
     price: 69.99,
     discountType: 'PIX',
     discountPercentage: 4
@@ -59,7 +59,7 @@ const products = ref([
   {
     id: 3,
     name: 'Carregadores Rápidos USB-C e Wireless',
-    image: 'src/assets/imgs/products/Carregador.jpg',
+    image: 'src/assets/imgs/Products/Carregador.jpg',
     price: 49.99,
     discountType: 'PIX',
     discountPercentage: 6
@@ -67,7 +67,7 @@ const products = ref([
   {
     id: 4,
     name: 'Fones de Ouvido Bluetooth In-ear',
-    image: 'src/assets/imgs/products/FoneBluetooth.jpg',
+    image: 'src/assets/imgs/Products/FoneBluetooth.jpg',
     price: 99.99,
     discountType: 'PIX',
     discountPercentage: 7
@@ -75,7 +75,7 @@ const products = ref([
   {
     id: 5,
     name: 'Pacote de Manutenção Completa para Celulares',
-    image: 'src/assets/imgs/products/ManutencaoCelular.jpg',
+    image: 'src/assets/imgs/Products/ManutencaoCelular.jpg',
     price: 129.99,
     discountType: 'PIX',
     discountPercentage: 8
@@ -83,7 +83,7 @@ const products = ref([
   {
     id: 6,
     name: 'Capinhas Antichoque Personalizadas',
-    image: 'src/assets/imgs/products/CapaCelular.jpg',
+    image: 'src/assets/imgs/Products/CapaCelular.jpg',
     price: 79.9,
     discountType: 'PIX',
     discountPercentage: 5
@@ -91,7 +91,7 @@ const products = ref([
   {
     id: 7,
     name: 'Baterias Externas (Power Banks) de Alta Capacidade',
-    image: 'src/assets/imgs/products/BateriaExterna.jpg',
+    image: 'src/assets/imgs/Products/BateriaExterna.jpg',
     price: 54.99,
     discountType: 'PIX',
     discountPercentage: 6
@@ -99,7 +99,7 @@ const products = ref([
   {
     id: 8,
     name: 'Cabo de Selfie',
-    image: 'src/assets/imgs/products/CabodeSelfie.png',
+    image: 'src/assets/imgs/Products/CabodeSelfie.png',
     price: 109.99,
     discountType: 'PIX',
     discountPercentage: 7

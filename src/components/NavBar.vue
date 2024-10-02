@@ -29,11 +29,11 @@ const userName = computed(() => store.user.name)
         <img src="../assets/imgs/img-usuario.png" alt="foto usuario" />
         <div class="user-cadastro" v-if="userName">
           <p class="minha-conta">Olá {{ userName }}</p>
-          <RouterLink to="/login">trocar de conta</RouterLink>
+          <RouterLink to="/login">Trocar de conta</RouterLink>
         </div>
         <div class="user-cadastro" v-else>
           <p class="minha-conta">MINHA CONTA</p>
-          <RouterLink to="/login">entrar/cadastrar</RouterLink>
+          <RouterLink to="/login">Entrar/Cadastrar</RouterLink>
         </div>
       </div>
       <div class="content-carrinho" @click="toggleCartMenu">
@@ -61,6 +61,7 @@ const userName = computed(() => store.user.name)
 
 .container {
   display: flex;
+  justify-content: space-between;
 }
 
 nav {
@@ -135,6 +136,8 @@ p {
 .user-cadastro {
   color: white;
   text-decoration: none;
+  line-height:40%;
+  margin-bottom:5px;
 }
 a {
   text-decoration: none;
@@ -167,28 +170,29 @@ a {
 }
 .carrinho {
   display: flex;
-  height: 20px;
+  height: 17px;
 }
 .carrinho img {
   width: 10px;
   height: 10px;
   rotate: 90deg;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 .carrinho #carrinho {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: left;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-left: 5px;
   color: white;
 }
 #produtos {
-  font-family: Inter;
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 400;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 14px;
   margin-left: 3px;
   color: white;
 }
